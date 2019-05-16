@@ -22,7 +22,18 @@ class ViewController: UIViewController {
         numberLabel.delegate = self
     }
 
-
+    //Action buat Segue
+    @IBAction func registerUser(_ sender: Any) {
+        performSegue(withIdentifier: "GoToHome", sender: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        //Jika castingnya berhasil dan dapat HomViewController maka..
+        if let destination = segue.destination as? HomeViewController{
+            //Kita set nilai name di HomeViewController ke TextField
+            destination.name = fullNameLabel.text
+        }
+    }
 }
 
 //Extension buat TextField implementasi TextField Delegate

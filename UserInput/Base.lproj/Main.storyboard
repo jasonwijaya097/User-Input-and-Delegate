@@ -36,6 +36,9 @@
                                 <rect key="frame" x="179" y="215" width="57" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Register"/>
+                                <connections>
+                                    <action selector="registerUser:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ul9-7G-3gr"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -45,7 +48,7 @@
                     <connections>
                         <outlet property="fullNameLabel" destination="wpz-OH-3vr" id="TQM-EF-Nph"/>
                         <outlet property="numberLabel" destination="JRq-Wv-cqj" id="Oxj-xe-gVG"/>
-                        <segue destination="1k9-h7-aQx" kind="show" id="pG2-QW-is6"/>
+                        <segue destination="1k9-h7-aQx" kind="show" identifier="GoToHome" id="pG2-QW-is6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -71,6 +74,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="KfG-5O-Z5l"/>
                     </view>
+                    <connections>
+                        <outlet property="nameLabel" destination="8Sh-a9-Bnk" id="ke6-7L-UaD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cIO-jQ-wj0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
